@@ -20,7 +20,7 @@ services:
       - rocklov-network
 
   rocklov-web:
-    image: qaninja/rocklov-web
+    image: qaninja/rocklov-web:v3
     container_name: rocklov-web
     ports:
       - '3000:3000'

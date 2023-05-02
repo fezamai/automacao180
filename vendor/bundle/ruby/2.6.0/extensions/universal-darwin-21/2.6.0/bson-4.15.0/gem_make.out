@@ -1,0 +1,12 @@
+current directory: /Users/fernando.filho/Documents/Qaninja/rocklov-fe/vendor/bundle/ruby/2.6.0/gems/bson-4.15.0/ext/bson
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /Library/Ruby/Site/2.6.0 -r ./siteconf20230501-35050-3ickrd.rb extconf.rb
+creating Makefile
+
+current directory: /Users/fernando.filho/Documents/Qaninja/rocklov-fe/vendor/bundle/ruby/2.6.0/gems/bson-4.15.0/ext/bson
+make "DESTDIR=" clean
+
+current directory: /Users/fernando.filho/Documents/Qaninja/rocklov-fe/vendor/bundle/ruby/2.6.0/gems/bson-4.15.0/ext/bson
+make "DESTDIR="
+make: *** No rule to make target `/Users/fernando.filho/Documents/Xcode14.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/universal-darwin21/ruby/config.h', needed by `bytebuf.o'.  Stop.
+
+make failed, exit code 2
