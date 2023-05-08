@@ -3,10 +3,10 @@ require_relative "routes/sessions"
 describe "POST /sessions" do
   context "login com sucesso" do
     before(:all) do
-        @result = Sessions.new.login("betao@yahoo.com", "pwd123")
-     
+      payload = { email: "betao@yahoo.com", password: "pwd123" }
+      @result = Sessions.new.login(payload)
     end
-    
+
     it "valida status code" do
       expect(@result.code).to eql 200
     end
@@ -18,10 +18,10 @@ describe "POST /sessions" do
 
   context "senha invalida" do
     before(:all) do
-        @result = Sessions.new.login("betao@yahoo.com", "123456")
-     
+      payload = { email: "betao@yahoo.com", password: "123456" }
+      @result = Sessions.new.login(payload)
     end
-    
+
     it "valida status code" do
       expect(@result.code).to eql 401
     end
