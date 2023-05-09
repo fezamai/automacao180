@@ -1,4 +1,5 @@
 require_relative "routes/sessions"
+require_relative "helpers"
 
 describe "POST /sessions" do
   context "login com sucesso" do
@@ -16,44 +17,46 @@ describe "POST /sessions" do
     end
   end
 
-  examples = [
-    {
-      title: "senha incorreta",
-      payload: { email: "betao@yahoo.com", password: "123456" },
-      code: 401,
-      error: "Unauthorized",
-    },
-    {
-      title: "usuario não existe",
-      payload: { email: "404@yahoo.com", password: "123456" },
-      code: 401,
-      error: "Unauthorized",
-    },
-    {
-      title: "email em branco",
-      payload: { email: "", password: "123456" },
-      code: 412,
-      error: "required email",
-    },
-    {
-      title: "sem o campo email",
-      payload: { password: "123456" },
-      code: 412,
-      error: "required email",
-    },
-    {
-      title: "senha em branco",
-      payload: { email: "betao@yahoo.com", password: "" },
-      code: 412,
-      error: "required password",
-    },
-    {
-      title: "sem o campo senha",
-      payload: { email: "betao@yahoo.com" },
-      code: 412,
-      error: "required password",
-    },
-  ]
+  # examples = [
+  #   {
+  #     title: "senha incorreta",
+  #     payload: { email: "betao@yahoo.com", password: "123456" },
+  #     code: 401,
+  #     error: "Unauthorized",
+  #   },
+  #   {
+  #     title: "usuario não existe",
+  #     payload: { email: "404@yahoo.com", password: "123456" },
+  #     code: 401,
+  #     error: "Unauthorized",
+  #   },
+  #   {
+  #     title: "email em branco",
+  #     payload: { email: "", password: "123456" },
+  #     code: 412,
+  #     error: "required email",
+  #   },
+  #   {
+  #     title: "sem o campo email",
+  #     payload: { password: "123456" },
+  #     code: 412,
+  #     error: "required email",
+  #   },
+  #   {
+  #     title: "senha em branco",
+  #     payload: { email: "betao@yahoo.com", password: "" },
+  #     code: 412,
+  #     error: "required password",
+  #   },
+  #   {
+  #     title: "sem o campo senha",
+  #     payload: { email: "betao@yahoo.com" },
+  #     code: 412,
+  #     error: "required password",
+  #   },
+  # ]
+
+examples = Helpers::get_fixture("login")
 
   examples.each do |e|
     context "#{e[:title]}" do

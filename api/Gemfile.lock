@@ -1,11 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bson (4.15.0)
     diff-lcs (1.5.0)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     mini_mime (1.1.2)
+    mongo (2.18.0)
+      bson (>= 4.14.1, < 5.0.0)
     multi_xml (0.6.0)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
@@ -20,7 +23,6 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.0)
-    rufo (0.16.0)
 
 PLATFORMS
   x86_64-darwin-21
@@ -28,8 +30,8 @@ PLATFORMS
 DEPENDENCIES
   bundler (= 2.4.12)
   httparty (= 0.21.0)
+  mongo (= 2.18.0)
   rspec (= 3.12)
-  rufo (= 0.16.0)
 
 BUNDLED WITH
    2.4.12
