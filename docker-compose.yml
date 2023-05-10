@@ -10,7 +10,7 @@ services:
       - rocklov-network
 
   rocklov-api:
-    image: qaninja/rocklov-api:v2
+    image: qaninja/rocklov-api:v3
     container_name: rocklov-api
     environment:
       - NODE_ENV=development
